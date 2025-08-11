@@ -1,0 +1,29 @@
+<%- include('partials/navbar', {page: '/userHistory'}) %>
+
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">User History</h1>
+      <p class="py-6">Hello, <%= session.user.userName %>! Your email is <%= session.user.email %></p>
+      
+      <div class="overflow-x-auto">
+        <table class="table w-full">
+          <thead>
+            <tr>
+              <th>Login Date/Time</th>
+              <th>Client Information</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% session.user.loginHistory.forEach(function(history) { %>
+              <tr>
+                <td><%= history.dateTime %></td>
+                <td><%= history.userAgent %></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
