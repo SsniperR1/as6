@@ -1,0 +1,78 @@
+<%- include('partials/navbar', {page: '/solutions/addProject'}) %>
+
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">Add Project</h1>
+      <p class="py-6">Use the form below to add a new climate solution project.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container mx-auto px-4 py-8 max-w-2xl">
+  <div class="card bg-base-100 shadow-xl">
+    <div class="card-body">
+      <form method="POST" action="/solutions/addProject">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Title</span>
+          </label>
+          <input type="text" name="title" placeholder="Project Title" class="input input-bordered" required />
+        </div>
+        
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Feature Image URL</span>
+          </label>
+          <input type="url" name="feature_img_url" placeholder="https://example.com/image.jpg" class="input input-bordered" required />
+        </div>
+        
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Sector</span>
+          </label>
+          <select name="sector_id" class="select select-bordered w-full" required>
+            <option value="" disabled selected>Select a sector</option>
+            <% sectors.forEach(sector => { %>
+              <option value="<%= sector.id %>">
+                <%= sector.sector_name %>
+              </option>
+            <% }); %>
+          </select>
+        </div>
+        
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Short Summary</span>
+          </label>
+          <textarea name="summary_short" placeholder="Brief summary of the project" class="textarea textarea-bordered" required></textarea>
+        </div>
+        
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Introduction</span>
+          </label>
+          <textarea name="intro_short" placeholder="Introduction to the project" class="textarea textarea-bordered" required></textarea>
+        </div>
+        
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Impact</span>
+          </label>
+          <textarea name="impact" placeholder="What impact does this project have?" class="textarea textarea-bordered" required></textarea>
+        </div>
+        
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Original Source URL</span>
+          </label>
+          <input type="url" name="original_source_url" placeholder="https://example.com" class="input input-bordered" required />
+        </div>
+        
+        <div class="form-control mt-6">
+          <button class="btn btn-primary">Add Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

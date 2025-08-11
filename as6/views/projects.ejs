@@ -1,0 +1,60 @@
+<%- include('partials/navbar', {page: '/solutions/projects'}) %>
+
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">Projects</h1>
+      <p class="py-6">Browse our collection of climate solutions projects.</p>
+      <div class="flex justify-center gap-2 py-4">
+        <a href="/solutions/projects?sector=Industry" class="btn btn-sm">Industry</a>
+        <a href="/solutions/projects?sector=Transportation" class="btn btn-sm">Transportation</a>
+        <a href="/solutions/projects?sector=Energy" class="btn btn-sm">Energy</a>
+        <a href="/solutions/projects?sector=Agriculture" class="btn btn-sm">Agriculture</a>
+        <a href="/solutions/projects" class="btn btn-sm">All</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mx-auto px-4 py-8">
+  <div class="overflow-x-auto">
+    <% if (typeof projects !== 'undefined' && projects.length > 0) { %>
+      <table class="table w-full">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Sector</th>
+            <th>Summary</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% projects.forEach(function(project) { %>
+            <tr>
+              <td><%= project.title %></td>
+              <td>
+                <a href="/solutions/projects?sector=<%= project.Sector.sector_name %>" class="btn btn-sm btn-outline">
+                  <%= project.Sector.sector_name %>
+                </a>
+              </td>
+              <td><%= project.summary_short %></td>
+              <td>
+                <a href="/solutions/projects/<%= project.id %>" class="btn btn-sm">Details</a>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <div class="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <span>No projects found. Please make sure to run the data initialization script.</span>
+      </div>
+      
+      <div class="mt-6 text-center">
+        <p class="mb-4">To populate the database with sample projects, run:</p>
+        <pre class="bg-base-300 p-3 rounded-lg inline-block">node modules/projects.js</pre>
+      </div>
+    <% } %>
+  </div>
+</div>

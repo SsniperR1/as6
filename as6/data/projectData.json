@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Solar Power Initiative",
+    "feature_img_url": "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "summary_short": "A large-scale solar power project to provide clean energy to rural communities.",
+    "intro_short": "This initiative aims to bring sustainable power to areas with limited access to electricity.",
+    "impact": "The project has reduced carbon emissions by 10,000 tons annually and provided electricity to over 5,000 households.",
+    "original_source_url": "https://example.com/solar-initiative",
+    "sector_id": 1
+  },
+  {
+    "title": "Electric Vehicle Infrastructure",
+    "feature_img_url": "https://images.unsplash.com/photo-1593941707882-a5bfcf750e23?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "summary_short": "Expanding electric vehicle charging stations across urban centers.",
+    "intro_short": "This project addresses the lack of charging infrastructure that hinders electric vehicle adoption.",
+    "impact": "Installation of 200 charging stations has led to a 15% increase in electric vehicle usage in the target areas.",
+    "original_source_url": "https://example.com/ev-infrastructure",
+    "sector_id": 2
+  },
+  {
+    "title": "Sustainable Manufacturing Process",
+    "feature_img_url": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "summary_short": "Implementing zero-waste manufacturing processes in textile production.",
+    "intro_short": "This innovation drastically reduces water usage and eliminates chemical waste in fabric production.",
+    "impact": "The technology has been adopted by 15 factories, saving 500 million gallons of water annually.",
+    "original_source_url": "https://example.com/sustainable-manufacturing",
+    "sector_id": 3
+  },
+  {
+    "title": "Regenerative Farming Techniques",
+    "feature_img_url": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "summary_short": "Training farmers in carbon-capturing agricultural methods.",
+    "intro_short": "This program teaches techniques that improve soil health while sequestering atmospheric carbon.",
+    "impact": "Participating farms have seen a 30% increase in yield while reducing fertilizer use by 50%.",
+    "original_source_url": "https://example.com/regenerative-farming",
+    "sector_id": 4
+  }
+]
